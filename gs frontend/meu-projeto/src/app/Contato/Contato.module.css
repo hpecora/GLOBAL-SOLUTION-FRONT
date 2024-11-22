@@ -1,0 +1,120 @@
+/* Header */
+
+.container {
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #002366; /* cor azul */
+  color: #ffffff;
+  padding: 10px 20px;
+  width: 100vw;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+.main {
+  text-align: center;
+  padding: 2rem;
+}
+
+.integrantes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Permite que os cards quebrem linha em telas menores */
+}
+
+.card {
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.33% - 2rem); /* Garante que os cards se ajustem dentro de uma grade */
+  box-sizing: border-box;
+}
+
+.image {
+  width: 150px; /* Largura fixa para todas as imagens */
+  height: 150px; /* Altura fixa para todas as imagens */
+  border-radius: 50%; /* Torna a imagem circular */
+  object-fit: cover; /* Corta a imagem para caber perfeitamente no contêiner */
+  margin-bottom: 1rem;
+}
+
+.h1 {
+  color: #00008b;
+}
+
+/* Responsividade */
+
+/* Tablets (largura máxima 768px) */
+@media (max-width: 768px) {
+  .integrantes {
+    gap: 1rem; /* Reduz o espaçamento entre os cards */
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 1rem); /* Mostra 2 cards por linha em tablets */
+    max-width: 100%; /* Cards ocupam toda a largura disponível */
+  }
+
+  .main {
+    padding: 1.5rem; /* Reduz o padding em telas menores */
+  }
+}
+
+/* Celulares (largura máxima 480px) */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column; /* Empilha logo e links */
+    text-align: center;
+  }
+
+  .nav {
+    gap: 5px; /* Reduz o espaço entre links */
+    margin-top: 10px;
+  }
+
+  .integrantes {
+    flex-direction: column; /* Empilha os cards */
+    gap: 1rem;
+  }
+
+  .card {
+    flex: 1 1 100%; /* Cada card ocupa toda a largura */
+    max-width: 100%; /* Remove limite de largura */
+    padding: 1rem; /* Reduz o padding */
+  }
+
+  .image {
+    width: 120px; /* Diminui o tamanho da imagem */
+    height: 120px; /* Altura proporcional */
+  }
+
+  .main {
+    padding: 1rem; /* Reduz o padding geral */
+  }
+}

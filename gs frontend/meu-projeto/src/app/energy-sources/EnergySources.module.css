@@ -1,0 +1,213 @@
+/* Cabeçalho responsivo */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaço entre o logo e os links */
+    background-color: #002366; /* Cor azul */
+    color: #ffffff;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed; /* Fixado no topo */
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    z-index: 100; /* Certifica que está acima de tudo */
+}
+
+.logo {
+    height: 50px;
+    margin-right: 20px; /* Espaço entre o logo e os links */
+}
+
+.nav {
+    flex-grow: 1; /* Faz a área dos links ocupar o espaço restante */
+    display: flex;
+    justify-content: center; /* Centraliza os links horizontalmente */
+    gap: 15px; /* Espaçamento entre os links */
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container principal responsivo */
+.container {
+    font-family: Arial, sans-serif;
+    background: url('../img/imagem-de-fundo.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh; /* Faz a imagem ocupar toda a tela */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    margin-top: 60px; /* Espaço para o cabeçalho fixo */
+}
+
+/* Box de descrição */
+.descriptionbox {
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    color: #000;
+    font-size: 1rem;
+    width: 80%; /* Ajusta a largura */
+    max-width: 800px; /* Limita a largura máxima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Conteúdo principal responsivo */
+.content {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    justify-content: center; /* Centraliza os elementos em telas pequenas */
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px; /* Espaço entre as boxes */
+}
+
+/* Estilização das boxes */
+.formcontainer, .listcontainer {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px; /* Define largura máxima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulário */
+.form input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form button:hover {
+    background-color: #0055a5;
+}
+
+/* Lista de fontes cadastradas */
+.ul {
+    list-style: none;
+    padding: 0;
+}
+
+.li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f8f8;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Permite quebra de linha para texto longo */
+}
+
+.li span {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px; /* Adiciona espaço em caso de quebra */
+}
+
+.li div {
+    display: flex;
+    gap: 10px; /* Espaço entre botões */
+}
+
+.li div button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.li div button:nth-child(1) {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.i div button:nth-child(2) {
+    background-color: #f44336;
+    color: white;
+}
+
+.li div button:hover {
+    opacity: 0.8;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Empilha logo e links */
+        align-items: center;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .descriptionbox {
+        width: 90%;
+        font-size: 0.9rem; /* Texto menor em telas menores */
+    }
+
+    .content {
+        flex-direction: column; /* Empilha as boxes */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .formcontainer, .listcontainer {
+        width: 90%; /* Ocupa quase toda a largura */
+        max-width: none; /* Remove limite de largura */
+    }
+
+    .li {
+        flex-direction: column; /* Empilha texto e botões */
+        align-items: flex-start;
+    }
+
+    .li div {
+        width: 100%; /* Botões ocupam toda a largura */
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    .descriptionbox {
+        font-size: 0.8rem; /* Texto ainda menor */
+    }
+
+    .form button {
+        font-size: 0.9rem; /* Texto menor no botão */
+    }
+}

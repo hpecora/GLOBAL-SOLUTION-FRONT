@@ -1,0 +1,199 @@
+.container {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('..//img/aderir-fundo.png'); /* Substitua pelo caminho da sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #002366; /* cor azul */
+    color: #ffffff;
+    padding: 10px 20px;
+    width: 100vw;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .nav a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+
+.head, .energytypes, .advantages {
+    z-index: 2; /* para que o texto apareça acima da camada semi-transparente */
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.head h1 {
+    font-size: 2.5rem;
+    color: #000;
+    margin: 0;
+}
+
+.head p {
+    font-size: 1.2rem;
+    color: #000;
+    margin: 10px 0;
+}
+
+.introduction { 
+    color: #000;
+    z-index: 2; /* para que o texto apareça acima da camada semi-transparente */
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.energytypes h2, .introduction h2, .advantages h2 {
+    font-size: 2rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.energytype {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.energytype h3 {
+    font-size: 1.5rem;
+    color: #2980b9;
+}
+
+.energytype p, .advantages li {
+    font-size: 1rem;
+    color: #333;
+    list-style-type: none;
+}
+
+.advantages ul {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.advantages li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Reduz o padding para telas menores */
+    }
+
+    .header {
+        flex-direction: column; /* Empilha logo e navegação */
+        text-align: center;
+    }
+
+    .nav {
+        gap: 10px; /* Espaço entre os links */
+        margin-top: 10px;
+    }
+
+    .head h1 {
+        font-size: 2rem; /* Reduz tamanho do título principal */
+    }
+
+    .head p {
+        font-size: 1rem; /* Texto menor no parágrafo */
+    }
+
+    .energytypes h2, .introduction h2, .advantages h2 {
+        font-size: 1.5rem; /* Tamanho menor dos subtítulos */
+    }
+
+    .energytype, .advantages ul {
+        padding: 10px; /* Menor padding nos blocos de texto */
+        font-size: 0.95rem; /* Texto um pouco menor */
+    }
+
+    .energytype h3 {
+        font-size: 1.2rem; /* Título menor nas seções de tipos de energia */
+    }
+
+    .advantages li {
+        font-size: 1rem; /* Reduz o tamanho da fonte dos itens da lista */
+    }
+}
+
+/* Celulares (largura máxima 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 5px; /* Padding ainda menor */
+    }
+
+    .header {
+        padding: 10px; /* Menor padding no cabeçalho */
+    }
+
+    .nav {
+        gap: 5px; /* Reduz espaço entre os links */
+    }
+
+    .head h1 {
+        font-size: 1.8rem; /* Título menor para dispositivos móveis */
+    }
+
+    .head p {
+        font-size: 0.9rem; /* Texto menor no parágrafo */
+    }
+
+    .energytypes h2, .introduction h2, .advantages h2 {
+        font-size: 1.2rem; /* Reduz o tamanho dos subtítulos */
+    }
+
+    .energytype, .advantages ul {
+        padding: 8px; /* Menor padding nos blocos */
+        font-size: 0.85rem; /* Texto menor */
+    }
+
+    .energytype h3 {
+        font-size: 1rem; /* Título menor nas seções de tipos de energia */
+    }
+
+    .advantages li {
+        font-size: 0.9rem; /* Texto menor nos itens da lista */
+    }
+}

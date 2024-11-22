@@ -1,0 +1,208 @@
+/* styles/Home.module.css */
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-image: url('..//img/imagem-de-fundo.png'); /* Substitua pelo caminho da sua imagem de fundo */
+  background-size: cover;
+  background-position: center bottom; /* Posiciona a imagem no centro e mais próxima da parte inferior */
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #002366; /* cor azul */
+  color: #ffffff;
+  padding: 10px 20px;
+  width: 100vw;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Seção Principal */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.heroColuna {
+  align-items: center;
+  text-align: center;
+}
+
+.heroText {
+  flex: 1;
+  margin-right: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.hero p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1d1c1c;
+  font-family: Arial, sans-serif;
+}
+
+.heroImage {
+  flex: 0 0 40%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.heroImageContent {
+  width: 100%; /* Ocupar toda a box */
+  height: 100%; /* Ocupar toda a box */
+  object-fit: cover;
+}
+
+/* Nova seção da PLS Clean Energy */
+
+.textContainer {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.highlight {
+  color: #004AAD;
+}
+
+.benefits h3 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.benefits ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.benefits li {
+  margin: 5px 0;
+}
+
+.ctaButton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #004AAD;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.ctaButton a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsividade */
+
+/* Ajustes para tablets e dispositivos médios */
+@media (max-width: 768px) {
+  .hero {
+      flex-direction: column; /* Empilha imagem e texto */
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+  }
+
+  .heroText {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .heroImage {
+      flex: 0 0 80%; /* Reduz largura da imagem */
+  }
+
+  .textContainer {
+      max-width: 90%; /* Reduz largura em telas menores */
+      font-size: 0.95rem; /* Reduz tamanho da fonte */
+  }
+}
+
+/* Ajustes para dispositivos pequenos (celulares) */
+@media (max-width: 480px) {
+  .container {
+      padding: 10px;
+  }
+
+  .hero {
+      padding: 15px;
+  }
+
+  .heroImage {
+      flex: 0 0 100%; /* Imagem ocupa toda a largura */
+  }
+
+  .heroText p {
+      font-size: 0.9rem; /* Texto menor */
+  }
+
+  .textContainer {
+      font-size: 0.85rem;
+      padding: 15px;
+  }
+
+  .ctaButton {
+      font-size: 0.9rem; /* Botão menor */
+      padding: 8px 16px;
+  }
+}
